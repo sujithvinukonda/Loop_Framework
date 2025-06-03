@@ -1,0 +1,4 @@
+2025-06-03 15:39:05,744 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 136.0.7103.113 (resolved driver for Chrome 136)
+2025-06-03 15:39:05,777 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\vinuk\.cache\selenium\chromedriver\win64\136.0.7103.113\chromedriver.exe
+2025-06-03 15:39:16,445 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 136.0.7103.113 (resolved driver for Chrome 136)
+2025-06-03 15:39:16,463 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\vinuk\.cache\selenium\chromedriver\win64\136.0.7103.113\chromedriver.exe
