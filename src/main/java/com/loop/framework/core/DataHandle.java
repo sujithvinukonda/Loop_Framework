@@ -6,7 +6,6 @@ import java.util.Map;
 public class DataHandle {
 
 	public static Map<String, String> testData = new HashMap<>();
-	private static ThreadLocal<String> currentCaseId = new ThreadLocal<>();
 	private static String currentCaseID;
 
 	public static void setCurrentCaseID(String caseID) {
@@ -26,7 +25,6 @@ public class DataHandle {
 
 	public static void loadTestData(String caseId) {
 		currentCaseID = caseId;
-		// setCurrentCaseId(caseId); // store for global use
 		testData = ExcelReader.getDataByCaseID(caseId); // load data into static map
 		if (testData == null || testData.isEmpty()) {
 			throw new RuntimeException("❌ No test data found for Case_ID: " + caseId);

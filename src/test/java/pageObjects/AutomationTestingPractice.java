@@ -95,7 +95,6 @@ public class AutomationTestingPractice extends PageObjectBase {
 			Loop.reporter.methodPassed();
 		} catch (Exception | AssertionError e) {
 			Loop.reporter.methodFailed("Error while entering phone number ", e);
-			// System.err.println(e.getMessage());
 
 		}
 	}

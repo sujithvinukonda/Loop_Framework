@@ -23,13 +23,6 @@ public class PageObjectBase {
 	protected static WebDriver driver;
 	protected static Properties properties;
 
-//	public PageObjectBase() throws IOException {
-//		if (driver == null) {
-//			driver = initializeBrowser();
-//		}
-//		PageFactory.initElements(driver, this);
-//	}
-
 	public PageObjectBase(WebDriver driver) {
 		PageObjectBase.driver = driver;
 		PageFactory.initElements(driver, this);

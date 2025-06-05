@@ -15,7 +15,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class ExcelReader {
 
 	private static final String EXCEL_PATH = "src\\test\\resources\\data\\testData.xlsx"; // adjust
-																																												// path
+																							// path
 
 	public static Map<String, String> getDataByCaseID(String caseID) {
 		Map<String, String> dataMap = new HashMap<>();
@@ -29,8 +29,6 @@ public class ExcelReader {
 				if (headerRow == null) {
 					continue;
 				}
-
-				// validateExcelHeaders(sheet); // ✅ Optional: validate headers
 
 				for (int i = 1; i <= sheet.getLastRowNum(); i++) {
 					Row row = sheet.getRow(i);
