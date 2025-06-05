@@ -1,4 +1,6 @@
-2025-06-03 15:39:05,744 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 136.0.7103.113 (resolved driver for Chrome 136)
-2025-06-03 15:39:05,777 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\vinuk\.cache\selenium\chromedriver\win64\136.0.7103.113\chromedriver.exe
-2025-06-03 15:39:16,445 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 136.0.7103.113 (resolved driver for Chrome 136)
-2025-06-03 15:39:16,463 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\vinuk\.cache\selenium\chromedriver\win64\136.0.7103.113\chromedriver.exe
+2025-06-05 11:51:45,375 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 137.0.7151.68 (resolved driver for Chrome 137)
+2025-06-05 11:51:45,488 [main] INFO  io.github.bonigarcia.wdm.online.Downloader - Downloading https://storage.googleapis.com/chrome-for-testing-public/137.0.7151.68/win64/chromedriver-win64.zip
+2025-06-05 11:51:47,501 [main] INFO  io.github.bonigarcia.wdm.online.Downloader - Extracting driver from compressed file chromedriver-win64.zip
+2025-06-05 11:51:47,786 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\vinuk\.cache\selenium\chromedriver\win64\137.0.7151.68\chromedriver.exe
+2025-06-05 11:51:59,314 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 137.0.7151.68 (resolved driver for Chrome 137)
+2025-06-05 11:51:59,331 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\vinuk\.cache\selenium\chromedriver\win64\137.0.7151.68\chromedriver.exe
