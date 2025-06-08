@@ -33,7 +33,6 @@ public class PageObjectBase {
 		String executionEnv = properties.getProperty("execution_env");
 		String browser = properties.getProperty("browser").toLowerCase();
 		String os = properties.getProperty("os").toLowerCase();
-
 		if (executionEnv.equalsIgnoreCase("remote")) {
 			DesiredCapabilities capabilities = new DesiredCapabilities();
 

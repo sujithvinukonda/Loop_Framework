@@ -1,20 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="WARN">
-	<Appenders>
-		<Console name="Console" target="SYSTEM_OUT">
-			<PatternLayout
-				pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
-		</Console>
-		<File name="File" fileName="logs/test-log.log" append="false">
-			<PatternLayout>
-				<Pattern>%d [%t] %-5level %logger{36} - %msg%n</Pattern>
-			</PatternLayout>
-		</File>
-	</Appenders>
-	<Loggers>
-		<Root level="info">
-			<AppenderRef ref="Console" />
-			<AppenderRef ref="File" />
-		</Root>
-	</Loggers>
+    <Appenders>
+        <RollingFile name="RollingFile"
+            fileName="logs/log-%X{caseID}.log"
+            filePattern="logs/log-%X{caseID}-%d{yyyy-MM-dd_HH-mm-ss}.log.gz">
+            <PatternLayout>
+                <Pattern>%msg%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="10MB" />
+            </Policies>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="RollingFile" />
+        </Root>
+    </Loggers>
 </Configuration>
