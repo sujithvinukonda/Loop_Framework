@@ -5,33 +5,51 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.loop.framework.core.ScreenshotUtil;
 
 public class Reporter {
 
-	private static final String LOG_LINE = "-----%s";
-
 	private static ThreadLocal<ExtentTest> currentTest = new ThreadLocal<>();
 
 	// Each Gherkin step gets its own list of MethodLog objects
 	private static ThreadLocal<List<MethodLog>> currentMethodLogs = ThreadLocal.withInitial(ArrayList::new);
 
+	private static ExtentReports extent; // Ensure extent is declared at the class level
+
 	public void startTest(String testName) {
-		ExtentTest test = ExtentReportManager.getExtentReports().createTest(testName);
+		extent = ExtentReportManager.getExtentReports(); // Initialize a new report for each test case
+		ExtentTest test = extent.createTest(testName);
 		currentTest.set(test);
 	}
 
 	public void flushReports() {
-		ExtentReportManager.getExtentReports().flush();
+		if (extent != null) {
+			extent.flush();
+		}
 	}
 
 	public void methodPassed() {
+//		try {
+//			String methodName = Thread.currentThread().getStackTrace()[2].getMethodName();
+//			String screenshot = ScreenshotUtil.captureScreenshotAsBase64();
+//			String timestamp = new SimpleDateFormat("hh:mm:ss a").format(new Date());
+//
+//			currentMethodLogs.get().add(new MethodLog(methodName, timestamp, screenshot, true));
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
 		try {
 			String methodName = Thread.currentThread().getStackTrace()[2].getMethodName();
 			String screenshot = ScreenshotUtil.captureScreenshotAsBase64();
 			String timestamp = new SimpleDateFormat("hh:mm:ss a").format(new Date());
+			long executionTime = System.currentTimeMillis();
+
+			// Log structured console output
+			// System.out.println("Pass" + executionTime);
+			System.out.println("✅ Pass " + timestamp + " Step Passed: " + methodName);
 
 			currentMethodLogs.get().add(new MethodLog(methodName, timestamp, screenshot, true));
 		} catch (Exception e) {
@@ -60,12 +78,29 @@ public class Reporter {
 	}
 
 	public void methodFailed(String message, Throwable error) {
+//		try {
+//			String methodName = Thread.currentThread().getStackTrace()[2].getMethodName();
+//			String screenshot = ScreenshotUtil.captureScreenshotAsBase64();
+//			String timestamp = new SimpleDateFormat("hh:mm:ss a").format(new Date());
+//
+//			// Store failed log
+//			currentMethodLogs.get().add(new MethodLog(methodName, timestamp, screenshot, false, error));
+//
+//			org.junit.Assert.fail(message); // Triggers JUnit failure
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			org.junit.Assert.fail("❌ Reporting failure: " + e.getMessage());
+//		}
 		try {
 			String methodName = Thread.currentThread().getStackTrace()[2].getMethodName();
 			String screenshot = ScreenshotUtil.captureScreenshotAsBase64();
 			String timestamp = new SimpleDateFormat("hh:mm:ss a").format(new Date());
+			long executionTime = System.currentTimeMillis();
 
-			// Store failed log
+			// Log structured console output
+			// System.out.println("Fail" + executionTime);
+			System.out.println("❌ Fail " + timestamp + " Step Failed: " + methodName + " - " + message);
+
 			currentMethodLogs.get().add(new MethodLog(methodName, timestamp, screenshot, false, error));
 
 			org.junit.Assert.fail(message); // Triggers JUnit failure

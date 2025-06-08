@@ -1,6 +1,6 @@
-2025-06-05 11:51:45,375 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 137.0.7151.68 (resolved driver for Chrome 137)
-2025-06-05 11:51:45,488 [main] INFO  io.github.bonigarcia.wdm.online.Downloader - Downloading https://storage.googleapis.com/chrome-for-testing-public/137.0.7151.68/win64/chromedriver-win64.zip
-2025-06-05 11:51:47,501 [main] INFO  io.github.bonigarcia.wdm.online.Downloader - Extracting driver from compressed file chromedriver-win64.zip
-2025-06-05 11:51:47,786 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\vinuk\.cache\selenium\chromedriver\win64\137.0.7151.68\chromedriver.exe
-2025-06-05 11:51:59,314 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 137.0.7151.68 (resolved driver for Chrome 137)
-2025-06-05 11:51:59,331 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\vinuk\.cache\selenium\chromedriver\win64\137.0.7151.68\chromedriver.exe
+2025-06-06 15:43:34,525 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 137.0.7151.68 (resolved driver for Chrome 137)
+2025-06-06 15:43:34,555 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\vinuk\.cache\selenium\chromedriver\win64\137.0.7151.68\chromedriver.exe
+2025-06-06 15:43:41,290 [main] INFO  com.loop.framework.reporting.Reporter - ✅ Pass 03:43:41 pm Step Passed: clickName
+2025-06-06 15:43:41,418 [main] INFO  com.loop.framework.reporting.Reporter - ✅ Pass 03:43:41 pm Step Passed: enterName
+2025-06-06 15:43:41,574 [main] INFO  com.loop.framework.reporting.Reporter - ✅ Pass 03:43:41 pm Step Passed: enterEmail
+2025-06-06 15:43:41,623 [main] ERROR com.loop.framework.reporting.Reporter - ❌ Fail 03:43:41 pm Step Failed: enterPhone - Error while entering phone number 

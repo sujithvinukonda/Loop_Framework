@@ -13,18 +13,18 @@ import org.openqa.selenium.TakesScreenshot;
 
 public class ScreenshotUtil {
 
-	public static File captureScreenshotAsFile() {
-		try {
-			File screenshot = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
-			File destFile = new File("screenshots/" + UUID.randomUUID() + ".png");
-			destFile.getParentFile().mkdirs();
-			Files.copy(screenshot.toPath(), destFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
-			return destFile;
-		} catch (Exception e) {
-			e.printStackTrace();
-			return null;
-		}
-	}
+//	public static File captureScreenshotAsFile() {
+//		try {
+//			File screenshot = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+//			File destFile = new File("screenshots/" + UUID.randomUUID() + ".png");
+//			destFile.getParentFile().mkdirs();
+//			Files.copy(screenshot.toPath(), destFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+//			return destFile;
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			return null;
+//		}
+//	}
 
 	public static String captureScreenshotAsBase64() {
 		try {
